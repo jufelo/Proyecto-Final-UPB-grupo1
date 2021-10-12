@@ -148,7 +148,7 @@
 
                     <input type="password" placeholder="Contraseña" class="form-control-field">
 
-                    <button class="btn btn-default btn-primary">Iniciar seción</button>
+                    <button class="btn btn-default btn-primary">Iniciar sesión</button>
                 </form>
             </div>
             <div class="column">
@@ -164,7 +164,7 @@
                     <input type="text" placeholder="Cédula" class="form-control-field" required
                         pattern="^[0-9]{6,10}" title="Ingrese entre 6 y 10 dígitos"> <!--Cédula colombiana-->
 
-                    <input type="text" placeholder="Correo" class="form-control-field" required
+                    <input type="email" placeholder="Correo" class="form-control-field" required
                         pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$" title="Ingrese un correo válido"> <!--Una implementación del Estandard Official: RFC 5322:
                             ( valida en el 99.99% de los emails existentes )-->
 
@@ -172,12 +172,10 @@
                         pattern="^[0-9]{10}" title="Ingrese 10 dígitos"> <!--Considerando el nuevo estandar de marcación nacional-->
 
                     <input type="text" placeholder="Dirección de domicilio" class="form-control-field"
-                        pattern="[A-Za-z0-9'\.\-\s\,]" title="Ingrese una dirección de correo válida">
+                        pattern="[A-Za-z0-9'\.\-\s\,]" title="Ingrese una dirección de domicilio válida">
 
                     <input type="password" placeholder="Contraseña" class="form-control-field" required
                         pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" title="ingresar por lo menos una letra mayúscula, una minúscula, un número y con una longitud mayor o igual a 8 dígitos.">
-
-                    <input type="password" placeholder="Confirmar contraseña" class="form-control-field">
 
                     <button class="btn btn-default btn-primary">Crear cuenta</button>
                 </form>
