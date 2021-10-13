@@ -1,3 +1,12 @@
+<?php
+ob_start();
+if(isset($_POST['registrar'])){
+    require  'metodos.php';
+    $registrar = new Registro();
+    $registrar->registrarUsuario();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -141,26 +150,43 @@
     <div class="container">
         <div class="columns">
             <div class="column">
-                <h2 class="is-size-4">Iniciar seción</h2>
+                <h2 class="is-size-4">Iniciar sesión</h2>
                 <form action="#" class="form-control">
 
-                    <input type="email" placeholder="Email" class="form-control-field error">
+                    <input type="email" placeholder="Correo" class="form-control-field error">
 
-                    <input type="password" placeholder="Password" class="form-control-field">
+                    <input type="password" placeholder="Contraseña" class="form-control-field">
 
-                    <button class="btn btn-default btn-primary">Iniciar seción</button>
+                    <button class="btn btn-default btn-primary">Iniciar sesión</button>
                 </form>
             </div>
             <div class="column">
                 <h2 class="is-size-4">Registro</h2>
-                <form action="#" class="form-control">
-                    <input type="email" placeholder="Email" class="form-control-field">
+                <form action="#" method="POST" class="form-control">
 
-                    <input type="password" placeholder="Password" class="form-control-field">
+                    <input type="text" placeholder="Nombre" name="nombre" class="form-control-field" required
+                        pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,30}" title="Ingrese entre 4 y 30 caracteres"> <!--Nombre independiente de la nacionalidad-->
 
-                    <input type="password" placeholder="Confirma tu password" class="form-control-field">
-                        
-                    <button class="btn btn-default btn-primary">Crear cuenta</button>
+                    <input type="text" placeholder="Apellido" name="apellido" class="form-control-field" required
+                        pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,30}" title="Ingrese entre 4 y 30 caracteres"> <!--Apellido independiente de la nacionalidad-->
+
+                    <input type="text" placeholder="Cédula" name="cedula" class="form-control-field" required
+                        pattern="^[0-9]{6,10}" title="Ingrese entre 6 y 10 dígitos"> <!--Cédula colombiana-->
+
+                    <input type="email" placeholder="Correo" name="correo" class="form-control-field" required
+                        pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$" title="Ingrese un correo válido"> <!--Una implementación del Estandard Official: RFC 5322:
+                            ( valida en el 99.99% de los emails existentes )-->
+
+                    <input type="tel" placeholder="Teléfono" name="telefono" class="form-control-field" required
+                        pattern="^[0-9]{10}" title="Ingrese 10 dígitos"> <!--Considerando el nuevo estandar de marcación nacional-->
+
+                    <input type="text" placeholder="Dirección de domicilio" name="direccion" class="form-control-field"
+                        pattern="[A-Za-z0-9'\.\-\s\,]" title="Ingrese una dirección de domicilio válida">
+
+                    <input type="password" placeholder="Contraseña" name="contrasena" class="form-control-field" required
+                        pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" title="ingresar por lo menos una letra mayúscula, una minúscula, un número y con una longitud mayor o igual a 8 dígitos.">
+
+                    <button type="submit" name="registrar" class="btn btn-default btn-primary">Crear cuenta</button>
                 </form>
             </div>
         </div>
