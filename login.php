@@ -25,10 +25,10 @@ if(isset($_POST['registrar'])){
         <nav class="navbar-top">
             <ul class="navbar-top-ul">
                 <li class="navbar-top-item">
-                    <a href="login.html" class="navbar-top-links">Registro</a>
+                    <a href="login.php" class="navbar-top-links">Registro</a>
                 </li>
                 <li class="navbar-top-item">
-                    <a href="login.html" class="navbar-top-links">Iniciar sesión</a>
+                    <a href="login.php" class="navbar-top-links">Iniciar sesión</a>
                 </li>
                 <li class="navbar-top-item">
                     <a href="#" class="navbar-top-links">
@@ -133,8 +133,8 @@ if(isset($_POST['registrar'])){
                     </li>
                     <li class="nav-menu-item"><a href="brand.html" class="nav-menu-link">La Marca</a></li>
                     <li class="nav-menu-item"><a href="lookbook.html" class="nav-menu-link">Look Book</a></li>
-                    <li class="nav-menu-item"><a href="login.html" class="nav-menu-link active">Registro</a></li>
-                    <li class="nav-menu-item"><a href="login.html" class="nav-menu-link">Iniciar Sesión</a></li>
+                    <li class="nav-menu-item"><a href="login.php" class="nav-menu-link active">Registro</a></li>
+                    <li class="nav-menu-item"><a href="login.php" class="nav-menu-link">Iniciar Sesión</a></li>
                 </ul>
             </nav>
         </nav>
