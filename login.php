@@ -2,8 +2,14 @@
 ob_start();
 if(isset($_POST['registrar'])){
     require  'metodos.php';
-    $registrar = new Registro();
+    $registrar = new Usuarios();
     $registrar->registrarUsuario();
+}
+
+if(isset($_POST['ingreso'])){
+    require  'metodos.php';
+    $ingresar = new Usuarios();
+    $ingresar->ingresarUsuario();
 }
 ?>
 
@@ -151,18 +157,18 @@ if(isset($_POST['registrar'])){
         <div class="columns">
             <div class="column">
                 <h2 class="is-size-4">Iniciar sesión</h2>
-                <form action="#" class="form-control">
+                <form action="" method = "POST" class="form-control">
 
-                    <input type="email" placeholder="Correo" class="form-control-field error">
+                    <input type="email" placeholder="Correo" name="correo" class="form-control-field error">
 
-                    <input type="password" placeholder="Contraseña" class="form-control-field">
+                    <input type="password" placeholder="Contraseña" name="contrasena" class="form-control-field">
 
-                    <button class="btn btn-default btn-primary">Iniciar sesión</button>
+                    <button type="submit" name="ingreso" class="btn btn-default btn-primary">Iniciar sesión</button>
                 </form>
             </div>
             <div class="column">
                 <h2 class="is-size-4">Registro</h2>
-                <form action="#" method="POST" class="form-control">
+                <form action="" method="POST" class="form-control">
 
                     <input type="text" placeholder="Nombre" name="nombre" class="form-control-field" required
                         pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,30}" title="Ingrese entre 4 y 30 caracteres"> <!--Nombre independiente de la nacionalidad-->
@@ -281,3 +287,7 @@ if(isset($_POST['registrar'])){
 </body>
 
 </html>
+
+<?php
+ob_end_flush();
+?>
