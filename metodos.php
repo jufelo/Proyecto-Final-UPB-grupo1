@@ -1,5 +1,5 @@
 <?php
-    class Registro{
+    class Usuarios{
         private $conexion;
         function __construct(){
             require_once('conexion.php');
@@ -21,6 +21,27 @@
             $stmt->execute();
             $stmt->close();
             $this->conexion->cerrar();
+            header('location: login.php');
+            die();
+        }
+
+        function ingresarUsuario(){
+            $correo = htmlentities(trim(strip_tags(stripcslashes($_POST['correo']))), ENT_NOQUOTES, "UTF-8");
+            $contrasena = htmlentities(trim(strip_tags(stripcslashes($_POST['contrasena']))), ENT_NOQUOTES, "UTF-8");
+            $sql = "SELECT nombre, apellido FROM Pro_usuarios WHERE correo = ? AND contrasena = ?;";
+            $stmt = $this->conexion->conexion->prepare($sql);
+            $stmt->bind_param("ss",$correo, $contrasena);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            if ($row = $result->fetch_assoc()){
+                echo "Bienvenido " . $row['nombre'] . " " . $row['apellido'] . " a la aplicación";
+            }
+            else{
+                echo "Usuario o contraseña incorrectos";
+            }
+            $stmt->close();
+            $this->conexion->cerrar();
         }
     }
+
 ?>
