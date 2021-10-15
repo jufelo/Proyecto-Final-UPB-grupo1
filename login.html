@@ -32,7 +32,7 @@
         <nav class="navbar">
             <header class="nabvar-mobile is-size-5-mobile">
                 <a class="navbar-mobile-link has-text-white" href="#" id="btn-mobile"><i class="zmdi zmdi-menu"></i></a>
-                <a class="navbar-mobile-link has-text-white" href="#">Avenue Fashion</a>
+                <a class="navbar-mobile-link has-text-white" href="#">Al gusto de ella</a>
                 <a class="navbar-mobile-link has-text-white" href="index.html"><i class="zmdi zmdi-shopping-cart"></i> Vacio</a>
             </header>
             <nav class="nav-menu --nav-dark-light" id="mySidenav">
@@ -84,7 +84,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav-menu-item" id="women">
+                    <!---li class="nav-menu-item" id="women">
                         <a href="#" class="nav-menu-link link-submenu">Mujer <i class="zmdi zmdi-chevron-down"></i> </a>
                         <div class="container-sub-menu">
 
@@ -121,7 +121,9 @@
                                 <h2 class="ads-h2">Desde el 50% de descuento</h2>
                             </div>
                         </div>
-                    </li>
+                    </li--->
+                    <li class="nav-menu-item"><a href="producto.html" class="nav-menu-link">Masculino</a></li>
+                    <li class="nav-menu-item"><a href="Femenino.html" class="nav-menu-link">Femenino</a></li>
                     <li class="nav-menu-item"><a href="brand.html" class="nav-menu-link">La Marca</a></li>
                     <li class="nav-menu-item"><a href="lookbook.html" class="nav-menu-link">Look Book</a></li>
                     <li class="nav-menu-item"><a href="login.html" class="nav-menu-link active">Registro</a></li>
@@ -141,28 +143,42 @@
     <div class="container">
         <div class="columns">
             <div class="column">
-                <h2 class="is-size-4">Iniciar seción</h2>
+                <h2 class="is-size-4">Iniciar Sesión</h2>
                 <form action="#" class="form-control">
 
-                    <input type="email" placeholder="Email" class="form-control-field error">
-
-                    <input type="password" placeholder="Password" class="form-control-field">
-
-                    <button class="btn btn-default btn-primary">Iniciar seción</button>
-                </form>
-            </div>
-            <div class="column">
-                <h2 class="is-size-4">Registro</h2>
-                <form action="#" class="form-control">
                     <input type="email" placeholder="Email" class="form-control-field">
 
-                    <input type="password" placeholder="Password" class="form-control-field">
+                    <input type="password" placeholder="Contraseña" class="form-control-field">
 
-                    <input type="password" placeholder="Confirma tu password" class="form-control-field">
-                        
-                    <button class="btn btn-default btn-primary">Crear cuenta</button>
+                    <button class="btn btn-default btn-primary">Iniciar Sesión</button>
                 </form>
             </div>
+            
+            <div class="column">
+                <h2 class="is-size-4">Formulario de Registro</h2>
+                <form action="php/Registro.php" method="post" class="form-control">
+                    <input type="text" placeholder="Nombre" class="form-control-field" id="Id_Nombre" name="Nombre"
+                        title="Coloque entre 4 y 30 carácteres">
+
+                    <input type="text" placeholder="Apellido" class="form-control-field" id="Id_Apellido" name="Apellido"
+                        title="Coloque entre 4 y 30 carácteres">
+
+                    <input type="number" placeholder="Número Celular" class="form-control-field" id="Id_Celular" name="Celular"
+                        title="Debe colocar 10 dígitos">
+
+                    <input type="email" placeholder="Email" class="form-control-field" id="Id_Correo" name="Correo"
+                        title="Coloque un correo válido">
+
+                    <input type="password" placeholder="Contraseña" class="form-control-field" id="Id_Contrasena" name="Contrasena"
+                        title="Debe colocar una Mayúscula, una Minúscula, un Número y ser mayor a 8 carácteres">
+
+                    <input type="password" placeholder="Confirma tu Contraseña" class="form-control-field" id="Id_ConfirmarContrasena"
+                        title="Ambas contraseñas deben ser iguales">
+                        
+                    <button class="btn btn-default btn-primary" type="submit" id="CrearCuenta" name="CrearCuenta">Crear Cuenta</button>
+                </form>
+            </div>
+            
         </div>
     </div>
 
@@ -175,8 +191,8 @@
                         <li class="footer-item">
                             <h3 class="has-text-weight-bold">Información</h3>
                         </li>
-                        <li class="footer-item"><a class="footer-link" href="#">La marca</a></li>
-                        <li class="footer-item"><a class="footer-link" href="#">Local stores</a></li>
+                        <li class="footer-item"><a class="footer-link" href="brand.html">La marca</a></li>
+                        <li class="footer-item"><a class="footer-link" href="brand.html">Local stores</a></li>
                         <li class="footer-item"><a class="footer-link" href="#">Servicios </a></li>
                         <li class="footer-item"><a class="footer-link" href="#">Privacidad y cookies</a></li>
                         <li class="footer-item"><a class="footer-link" href="#">Mapa del sitio</a></li>
@@ -200,10 +216,10 @@
                         <li class="footer-item">
                             <h3 class="has-text-weight-bold">Tu cuenta</h3>
                         </li>
-                        <li class="footer-item"><a class="footer-link" href="#">Iniciar sesión</a></li>
-                        <li class="footer-item"><a class="footer-link" href="#">Registro</a></li>
+                        <li class="footer-item"><a class="footer-link" href="login.html">Iniciar sesión</a></li>
+                        <li class="footer-item"><a class="footer-link" href="login.html">Registro</a></li>
                         <li class="footer-item"><a class="footer-link" href="#">Ver carrito </a></li>
-                        <li class="footer-item"><a class="footer-link" href="#">Ver catálogo</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Ver tu catálogo</a></li>
                         <li class="footer-item"><a class="footer-link" href="#">Track an order</a></li>
                     </ul>
                 </div>
@@ -212,11 +228,11 @@
                         <li class="footer-item">
                             <h3 class="has-text-weight-bold">Catalogo</h3>
                         </li>
-                        <li class="footer-item"><a class="footer-link" href="#">Catálogo para hombres</a></li>
-                        <li class="footer-item"><a class="footer-link" href="#">Catálogo para mujeres</a></li>
-                        <li class="footer-item"><a class="footer-link" href="#">Ver tu Catalogo </a></li>
+                        <li class="footer-item"><a class="footer-link" href="producto.html">Catálogo para hombres</a></li>
+                        <li class="footer-item"><a class="footer-link" href="Femenino.html">Catálogo para mujeres</a></li>
+                        <li class="footer-item"><a class="footer-link" href="lookbook.html">Ver Catálogo </a></li>
                         <li class="footer-item"><a class="footer-link" href="#">Privacidad y cookies</a></li>
-                        <li class="footer-item"><a class="footer-link" href="#">Borrar tu catalogo</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Borrar tu catálogo</a></li>
                     </ul>
                 </div>
                 <div class="column">
@@ -226,10 +242,10 @@
                             <h3 class="has-text-weight-bold">Datos de contacto</h3>
                         </li>
                         <li class="footer-item"><a class="footer-link" href="#">Head</a></li>
-                        <li class="footer-item"><a class="footer-link" href="#">Catálogo para mujeres</a></li>
-                        <li class="footer-item"><a class="footer-link" href="#">Ver tu Catalogo </a></li>
+                        <li class="footer-item"><a class="footer-link" href="Femenino.html">Catálogo para mujeres</a></li>
+                        <li class="footer-item"><a class="footer-link" href="lookbook.html">Ver Catálogo </a></li>
                         <li class="footer-item"><a class="footer-link" href="#">Privacidad y cookies</a></li>
-                        <li class="footer-item"><a class="footer-link" href="#">Borrar tu catalogo</a></li>
+                        <li class="footer-item"><a class="footer-link" href="#">Borrar tu catálogo</a></li>
                     </ul>
                 </div>
                 <div class="column is-full">
@@ -242,16 +258,14 @@
                 </div>
             </div>
         </div>
-
         <div class="footer-bar-top">
             <div class="container">
-                <a class="footer-bar-top-links" href="#">2019 Avenue Fashion</a>
+                <a class="footer-bar-top-links" href="#">2021 Al gusto de ella</a>
             </div>
         </div>
     </footer>
-    <script src="js/main.js"></script>
-
-
+    <!--script src="js/main.js"></script>-->
+    <script src="js/login.js"></script>
 </body>
 
 </html>
