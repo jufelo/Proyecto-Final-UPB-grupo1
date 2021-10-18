@@ -1024,7 +1024,7 @@ footer {
     outline: none;
 }
 
-.error {
+input:invalid {
     border: 1px solid #bb5465;
     background: #fcf8f9;
 }
